@@ -16,7 +16,12 @@ Change the permission of the awskey by using `chmod 700 awskey.pem` (700 means r
 
 SSH into the instance by using `ssh -v -i ubuntu@IP` 
 
+1. AWS Console on launching the EC2 instance
+
 ![AWS console](/AWS_console.png)
+
+2. Terminal on launching the EC2 instance
+
 ![Terminal](/Terminal.png)
 
 In the new instance, the first thing which we should ideally do is to run `sudo apt-get update`
@@ -27,7 +32,10 @@ I cloned the Flights API Gateway repository from "singhsanket143/API_Gateway.git
 
 Once cloned, we install the dependencies using `npm install` and then run the app by using `node index.js`
 
+Application running on EC2 instance:
+
 ![Application running on EC2 instance](/Application_running_on_EC2_instance.png)
+
 
 Try to send a HTTP request to the instance by sending request to 'IP:3005/home' through the browser.
 
@@ -38,5 +46,7 @@ Hence,we set up a daemon process (background process) by using the 'pm2' package
 In order to start the daemon process, use `npx pm2 start index.js`. In order to stop the daemon process, use `npx pm2 stop index.js`
 
 PM2 is a powerful package and can handle load balancing to some extent, by itself.
+
+Terminal on terminating the instance:
 
 ![Terminal on terminating the instance](/Terminal_on_terminating_the_instance.png)
