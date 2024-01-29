@@ -1,3 +1,5 @@
+This repository is to explore the concepts around AWS from the Backend Development in NodeJS cohort.
+
 AWS is Amazon Web Services, which is a cloud service provided by Amazon. Cloud, in the context of computer science, refers to remote machines or remote servers that are available to us for use.
 
 The services which we explored in the cohort:
@@ -10,12 +12,12 @@ Key: This contains certificates (in the form of .pem file) which are needed in o
 
 Security group: A set of firewall rules that control the traffic for the resource. We specify the ports and the protocols which with which our instance can interact.
 
-Change the permission of the awskey by using `chmod 700 awskey.pem`
+Change the permission of the awskey by using `chmod 700 awskey.pem` (700 means read,write and execute permissions for the user, and 0 privilege for group and others)
 
 SSH into the instance by using `ssh -v -i ubuntu@IP` 
 
-[AWS console](/AWS_console.png)
-[Terminal](/Terminal.png)
+![AWS console](/AWS_console.png)
+![Terminal](/Terminal.png)
 
 In the new instance, the first thing which we should ideally do is to run `sudo apt-get update`
 
@@ -25,7 +27,7 @@ I cloned the Flights API Gateway repository from "singhsanket143/API_Gateway.git
 
 Once cloned, we install the dependencies using `npm install` and then run the app by using `node index.js`
 
-[Application running on EC2 instance](/Application_running_on_EC2_instance.png)
+![Application running on EC2 instance](/Application_running_on_EC2_instance.png)
 
 Try to send a HTTP request to the instance by sending request to 'IP:3005/home' through the browser.
 
@@ -37,4 +39,4 @@ In order to start the daemon process, use `npx pm2 start index.js`. In order to 
 
 PM2 is a powerful package and can handle load balancing to some extent, by itself.
 
-[Terminal on terminating the instance](/Terminal_on_terminating_the_instance.png)
+![Terminal on terminating the instance](/Terminal_on_terminating_the_instance.png)
