@@ -99,11 +99,11 @@ AWS spinning up new instances after the CPU threshold limit is reached:
 
 Before: 
 
-[Before](./Before.png)
+![Before](./Before.png)
 
 After: 
 
-[After](./After.png)
+![After](./After.png)
 
 The relevant instance template, security group, autoscaling group etc can be found on the AWS account associated with `girikgarg9@gmail.com`. 
 
